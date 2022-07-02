@@ -1,0 +1,77 @@
+
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <h2 class="breadcrumb-title">Sharing</h2>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-xl-3 mt-5">
+        <div class="card ">
+            <div class="card-body">
+                <div class="pro-widget-content">
+                    <div class="profile-info-widget">
+                        
+                        <div style="text-align: centre;" class="profile-det-info">
+                            <h3>Sharing is Caring</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="patient-info">
+                   <p>There we got requests for Books, if you have any extra book in your library, You can help others by sharing your book free of cost, because we believe that, <b>Sharing is Caring</b></p>
+                    <!-- <ul>
+                        <li>Phone <span>+1 952 001 8563</span></li>
+                        <li>Age <span>38 Years, Male</span></li>
+                        <li>Blood Group <span>AB+</span></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9 col-lg-9 col-xl-9 ">
+        
+        <div class="row">
+            <p style="color: red;text-align:center">{{NoRequest}}</p>
+            <div class="col-md-12 col-lg-12 col-xl-12 mt-5 d-flex justify-content-center" *ngFor="let item of Requests">
+               
+                <div class="card widget-profile pat-widget-profile" style="width: 25rem;">
+                    <div class="card-body">
+                        <div class="pro-widget-content">
+                            <div class="profile-info-widget">
+                                <a href="patient-profile.html" class="booking-doc-img">
+                                    <img src="assets/img/patients/barber_03.png" alt="User Image">
+                                </a>
+                                <div class="profile-det-info">
+                                    <h3><a href="patient-profile.html">{{item.name}}</a></h3>
+                                    <div class="patient-details">
+
+                                        <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i>{{item.address}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="patient-info">
+                            <ul>
+                                <li>Title <span>{{item.title}}</span></li>
+                                <li>Author <span>{{item.author}}</span></li>
+                                <li>Publisher <span>{{item.publisher}}</span></li>
+                                <li>ISBN <span>{{item.isbn}}</span></li>
+                                <li>Edition <span>{{item.edition}}</span></li>
+                                <li>Action<span> <a class="btn btn-primary" type="button" style="color: white;" (click)="AcceptRequest(item.id)">Donate</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

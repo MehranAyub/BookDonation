@@ -1,0 +1,36 @@
+<div  class="w-100 mat-input-field">
+  <mat-form-field class="w-100" [ngClass]="!isValidData ? 'mat-form-field-invalid ng-invalid' : ''">
+
+    <mat-label>{{placeholder}}</mat-label>
+
+    <input matInput
+           [id]="placeholder"
+           [ngModel]="inputValue"
+           (keydown.enter)="onFocusout($event.srcElement.id)"
+           (ngModelChange)="onChange($event)"
+           [type]="inputType"
+           name="{{placeholder.replace(' ', '_')}}"
+           autocomplete="new {{placeholder.replace(' ', '_')}}"
+           [maxlength]="maxlength"
+           [required]="(isOptional ? false: true)"
+           [disabled]="isDisabled"
+           [placeholder]="inputMask"
+           [autofocus]="focus"
+           [tabIndex]="tabindex"
+           [pattern]="pattern"
+           >
+
+    <span matPrefix *ngIf="!!preFixIconPath" class="prefix-icon" (click)="PrefixIconEvent.emit($event)" ><img [src]="preFixIconPath"></span>
+
+    <span class="input-optional color-mid-grey body-4" matSuffix *ngIf="!!isOptional">{{isOptionalText}}</span>
+
+    <span class="input-optional color-mid-grey body-4" matPrefix *ngIf="!!preFixText">{{preFixText}}</span>
+    <span class="input-optional color-mid-grey body-4" (click)="PostFixTextEvent.emit($event)" matSuffix
+      *ngIf="!!postFixText">{{postFixText}}</span>
+
+    <mat-icon matSuffix *ngIf="!!postFixIconPath"> <img [src]="postFixIconPath"> </mat-icon> 
+    <span class="color-red errorText" *ngIf="!isValidData && !!errorText">
+      {{errorText}}
+    </span>
+  </mat-form-field>
+</div>

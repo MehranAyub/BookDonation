@@ -1,0 +1,46 @@
+<footer class="footer">
+    <div class="container">
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item" (click)="NavItemEvent(1)">
+                <a class="nav-link active"  [class.active]="activItem==1" >
+                    <span>
+                        <i class="nav-icon bi bi-search"></i>
+                        <span class="nav-text">Search</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item"  (click)="NavItemEvent(2)">
+                <a class="nav-link" [class.active]="activItem==2" >
+                    <span>
+                        <i class="nav-icon bi bi-bar-chart-line"></i>
+                        <span class="nav-text">ABC</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item center-item"  (click)="NavItemEvent(3)">
+                <a class="nav-link"  [class.active]="activItem==3">
+                    <span>
+                        <i class="nav-icon bi bi-house"></i>
+                        <span class="nav-text">Home</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item"  (click)="NavItemEvent(4)">
+                <a class="nav-link" [class.active]="activItem==4">
+                    <span>
+                        <i class="nav-icon bi bi-palette"></i>
+                        <span class="nav-text">Style</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item"  (click)="NavItemEvent(5)">
+                <a class="nav-link" [class.active]="activItem==5">
+                    <span>
+                        <i class="nav-icon bi bi-gear"></i>
+                        <span class="nav-text">Settings</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>

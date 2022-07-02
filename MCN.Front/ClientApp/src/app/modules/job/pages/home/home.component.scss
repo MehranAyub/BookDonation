@@ -1,0 +1,13 @@
+::ng-deep.home-map{
+
+    button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 5;
+    }
+
+    .has-footer{
+        padding-bottom: unset !important;
+    }
+}

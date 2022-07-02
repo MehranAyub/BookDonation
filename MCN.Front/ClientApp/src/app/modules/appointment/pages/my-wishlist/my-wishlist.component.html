@@ -1,0 +1,62 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-8 col-12">
+                <h2 class="breadcrumb-title">WishList</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-lg-2 col-xl-3">
+
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-9">
+
+                <div class="card" *ngFor="let item of Books">
+                    <div class="card-body">
+                        <div class="doctor-widget">
+                            <div class="doc-info-left">
+                                <div class="doctor-img">
+                                    <a>
+                                        <img [src]="item?.image" onerror="this.src='assets/img/defaultCover.png'"
+                                            class="img-fluid" alt="User Image">
+                                    </a>
+                                </div>
+                                <div class="doc-info-cont">
+                                    <h4 class="doc-name"><a>{{item?.title}}</a></h4>
+
+
+                                    <div class="clinic-details">
+                                        <p class="doc-speciality"><i class="fas fa-money-bill"></i> R.S {{item?.price}}
+                                        </p>
+                                        <p class="doc-location mt-3"><i class="far fa-user"></i> {{item?.author}}
+                                            <small style="color: green;">(author)</small>
+                                        </p>
+
+                                        <p class="doc-location mt-3"><i class="far fa-user"></i> {{item?.publisher}}
+                                            <small style="color: green;">(publisher)</small>
+                                        </p>
+                                        <p class="doc-location mt-3"><i class="fas fa-sort-amount-up"></i>
+                                            {{item?.copiesInStock}} <small style="color: green;">(stock)</small></p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="doc-info-right">
+
+                                <div class="clinic-booking">
+                                    <a class="apt-btn" 
+                                        (click)="orderBook(item.id)">Order Book</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

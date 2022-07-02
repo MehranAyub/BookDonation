@@ -1,0 +1,85 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-md-8 col-12">
+        <h2 class="breadcrumb-title">Search Stores</h2>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="content">
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+        
+        <div class="card search-filter">
+        <div class="card-header">
+        <h4 class="card-title mb-0">Search Filter</h4>
+        </div>
+        <div class="card-body">
+        <div class="filter-widget">
+        <div class="">
+        <input type="text" class="form-control" #keywordVal (keyup)="keyUpEvent(keywordVal.value)" placeholder="Type any keyword">
+        </div>
+        </div>
+     
+        <div class="filter-widget">
+        <!-- <h4>Select Specialities</h4> -->
+       
+       
+        </div>
+      
+        </div>
+        </div>
+        
+        </div>
+        <div class="col-md-12 col-lg-8 col-xl-9">
+        
+        <div class="card" *ngFor="let item of salons">
+        <div class="card-body">
+        <div class="doctor-widget">
+        <div class="doc-info-left">
+        <div class="doctor-img">
+        <a >
+        <img   [src]="item?.salonLogo" onerror="this.src='assets/img/user-img.png'" class="img-fluid" alt="User Image">
+        </a>
+        </div>
+        <div class="doc-info-cont">
+        <h4 class="doc-name"><a > {{item?.name}}</a></h4>
+        <!-- <p class="doc-speciality">{{item?.description}}</p> -->
+       
+        <div class="clinic-details">
+        <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{item?.address}}</p>
+        <!-- <p class="doc-location"><i class="fas fa-envelope"></i> {{item?.email}}</p>
+        <p class="doc-location"><i class="fas fa-phone"></i> {{item?.phone}}</p> -->
+       
+        </div>
+        <!-- <span style="display: inline;" *ngFor="let spe of item.specialities" class="clinic-services">
+        <span >{{spe?.name}}</span>
+        
+        </span> -->
+        </div>
+        </div>
+        <div class="doc-info-right">
+        <div class="clini-infos">
+        
+        </div>
+        <div class="clinic-booking">
+        <a class="apt-btn" (click)="getBooks(item.id,item.registerBy)">Visit Store</a>
+        </div>
+        <div class="clinic-booking mt-3">
+            <a class="apt-btn"  (click)="goToLibrary(item.id,item.registerBy)">Visit Library</a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        

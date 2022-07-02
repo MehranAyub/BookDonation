@@ -1,0 +1,85 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-md-12 col-12">
+    <h2 class="breadcrumb-title">Your Library Books</h2>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="module-title">
+                <h4>Add New Book.</h4>
+                <span class="module-separator"></span>
+            </div><!-- end title -->
+            <div class="form-group">
+                <input class="form-control" #title [(ngModel)]="bookDto.Title" type="text" placeholder="Title" required>
+            </div>
+           
+            <div class="form-group">
+                <input class="form-control" #link [(ngModel)]="bookDto.Link" type="text" placeholder="Add Link of pdf" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" #authName [(ngModel)]="bookDto.Author" type="text" placeholder="Author Name" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" #pubName [(ngModel)]="bookDto.Publisher" type="text" placeholder="publisher Name" required>
+            </div>
+            <div>
+                <p style="color: red;">{{this.error}}</p>
+            </div>
+
+            <div class="form-group mb-0">
+                <button class="btn btn-primary btn-block mb-5" (click)="AddBook()" (click)="link.value='';title.value='';authName.value='';pubName.value=''" type="submit">Add</button>
+            </div>
+       
+
+   
+        </div>
+
+        <div class="col-md-8 col-lg-8 col-sm-12 mt-5">
+        
+            <div class="card" *ngFor="let item of Books">
+            <div class="card-body">
+            <div class="doctor-widget">
+            <div class="doc-info-left">
+            <div class="doctor-img">
+            <a >
+            <img src="assets/img/defaultCover.png" class="img-fluid" alt="User Image">
+            </a>
+            </div>
+            <div class="doc-info-cont">
+            <h4 class="doc-name"><a > {{item?.title}}</a></h4>
+            <!-- <p class="doc-speciality">{{item?.description}}</p> -->
+           <br>
+            <div class="clinic-details">
+            <p class="doc-location">Written By <b>{{item?.author}}</b></p>
+            <p class="doc-location">Published By<b> {{item?.publisher}}</b></p>
+            <p class="doc-location">Read from <b> <a href={{item.link}} >Read From Here</a></b></p>
+            
+           
+            </div>
+            </div>
+            </div>
+            <div class="doc-info-right">
+            <div class="clini-infos">
+            
+            </div>
+            <div class="appointment-action">
+                    
+                <a (click)="RemoveBook(item.id)" class="btn btn-sm bg-danger-light">
+                <i class="fas fa-times"></i> Remove
+                </a>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+    </div><!-- end row -->
+</div>

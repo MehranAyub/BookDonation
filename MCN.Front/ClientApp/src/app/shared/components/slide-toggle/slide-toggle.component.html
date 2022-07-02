@@ -1,0 +1,10 @@
+<div  ngClass="slide-toggle-component">
+    <span class="keepLogin" [ngClass]="(color==true ? 'color-dark-grey' : '')" fxFlex="85%">
+        {{label}}
+    </span>
+    <span class="float-right">
+        <mat-slide-toggle [checked]="checked" (change)="changeToggle($event)" id="{{name}}">
+
+        </mat-slide-toggle>
+    </span>
+</div>

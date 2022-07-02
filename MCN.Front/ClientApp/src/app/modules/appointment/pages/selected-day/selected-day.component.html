@@ -1,0 +1,83 @@
+
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-md-12 col-12">
+    <nav aria-label="breadcrumb" class="page-breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a >Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">SelectDate</li>
+    </ol>
+    </nav>
+  
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="content">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-7 col-lg-8">
+    <div class="card">
+    <div class="card-body">
+    
+    <form >
+    
+    <div class="info-widget">
+    <h4 class="card-title">Select Date for Appointment  </h4>
+    <div class="row">
+  
+    
+  
+    
+    <div class="col-md-6 col-sm-12">
+    <div class="filter-widget">
+        <div >
+        <input type="date" class="form-control " min="{{currentDate | date:'yyyy-MM-dd'}}" name="date" [(ngModel)]="appointmentDto.Date" placeholder="Select Date">
+        </div>
+        </div>
+</div>
+    
+
+    </div>
+    <div ><button  class="btn btn-block btn-primary"  (click)="FindSlots()">Next</button></div>
+    </div>
+     
+    </form>
+    
+    </div>
+    </div>
+    </div>
+    <div class="col-md-5 col-lg-4 theiaStickySidebar">
+    
+    <div class="card booking-card">
+    <div class="card-header">
+    <h4 class="card-title">Selected Barber</h4>
+    </div>
+    <div class="card-body">
+    
+    <div class="booking-doc-info">
+    <a class="booking-doc-img">
+    <img src="assets/img/barber_03.png" alt="User Image">
+    </a>
+    <div class="booking-info">
+    <h4><a >{{doctor?.firstName}} {{doctor?.lastName}}</a></h4>
+    
+    <div class="clinic-details">
+    <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{doctor?.address}}</p>
+    <p class="doc-location"><i class="fas fa-phone-alt"></i> {{doctor?.phone}}</p>
+    <p class="doc-location"><i class="fas fa-mail-alt"></i> {{doctor?.email}}</p>
+    </div>
+    </div>
+    </div>
+     
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    

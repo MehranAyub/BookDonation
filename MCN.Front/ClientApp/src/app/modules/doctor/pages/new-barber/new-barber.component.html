@@ -1,0 +1,122 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-md-12 col-12">
+    <h2 class="breadcrumb-title">Your Books</h2>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="module-title">
+                <h4>Add New Book.</h4>
+                <span class="module-separator"></span>
+            </div><!-- end title -->
+            <div class="form-group">
+                <input class="form-control" #title [(ngModel)]="bookDto.Title" type="text" placeholder="Title" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" #isbn [(ngModel)]="bookDto.Isbn" type="text" placeholder="ISBN" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" #price [(ngModel)]="bookDto.Price" type="number" placeholder="Price" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" #copies [(ngModel)]="bookDto.Copies" type="number" placeholder="No. of Copies" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" #authName [(ngModel)]="bookDto.AuthName" type="text" placeholder="Author Name" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" #pubName [(ngModel)]="bookDto.PubName" type="text" placeholder="publisher Name" required>
+            </div>
+            <div>
+                <p style="color: red;">{{this.error}}</p>
+            </div>
+
+            <div class="form-group mb-0">
+                <button class="btn btn-primary btn-block mb-5" (click)="RegisterBarber()" (click)="title.value='';isbn.value='';price.value='';copies.value='';authName.value='';pubName.value=''" type="submit">Add</button>
+            </div>
+       
+
+   <!-- end sidebar -->
+
+        <!-- <div class="col-md-8 col-sm-12 mt-5">
+            
+                <div class="appointments">
+    
+                    <div class="appointment-list" *ngFor="let item of Barbers">
+                    <div class="profile-info-widget">
+                    <a href="patient-profile.html" class="booking-doc-img">
+                    <img src="assets/img/patients/patient.jpg" alt="User Image">
+                    </a>
+                    <div class="profile-det-info">
+                    <h3><a >{{item?.firstName}}&nbsp;{{item.lastName}}</a></h3>
+                    <div class="patient-details">
+                    
+                    <h5 class="mt-3"><i class="fas fa-phone"></i> {{item?.phone}}</h5>
+                    <h5 class="mt-3"> {{item?.description}}</h5>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="appointment-action">
+                    
+                    <a (click)="RemoveBarber(item.id)" class="btn btn-sm bg-danger-light">
+                    <i class="fas fa-times"></i> Remove
+                    </a>
+                    </div>
+                    </div>
+                    
+                     
+                    </div>
+             
+
+            </div> -->
+        </div><!-- end contenet -->
+
+        <div class="col-md-8 col-lg-8 col-sm-12 mt-5">
+        
+            <div class="card" *ngFor="let item of Books">
+            <div class="card-body">
+            <div class="doctor-widget">
+            <div class="doc-info-left">
+            <div class="doctor-img">
+            <a >
+            <img src="assets/img/defaultCover.png" class="img-fluid" alt="User Image">
+            </a>
+            </div>
+            <div class="doc-info-cont">
+            <h4 class="doc-name"><a > {{item?.title}}</a></h4>
+            <!-- <p class="doc-speciality">{{item?.description}}</p> -->
+           <br>
+            <div class="clinic-details">
+            <p class="doc-location">Price R.S <b>{{item?.price}}</b></p>
+            <p class="doc-location">Published By<b> {{item?.publisherName}}</b></p>
+            <p class="doc-location">Written By <b>{{item?.authorName}}</b></p>
+            <p class="doc-location">Copies <b>{{item?.copiesInStock}}</b></p>
+           
+            </div>
+            </div>
+            </div>
+            <div class="doc-info-right">
+            <div class="clini-infos">
+            
+            </div>
+            <div class="appointment-action">
+                    
+                <a (click)="RemoveBook(item.id)" class="btn btn-sm bg-danger-light">
+                <i class="fas fa-times"></i> Remove
+                </a>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+    </div><!-- end row -->
+</div>

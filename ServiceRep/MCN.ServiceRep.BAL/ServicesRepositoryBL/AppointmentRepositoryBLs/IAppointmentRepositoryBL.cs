@@ -1,0 +1,30 @@
+﻿using MCN.Common.AttribParam;
+using MCN.ServiceRep.BAL.ServicesRepositoryBL.AppointmentRepositoryBLs.Dtos;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.AppointmentRepositoryBLs
+{
+   public interface IAppointmentRepositoryBL
+    {
+        SwallResponseWrapper searchDoctors(SearchDoctorFilterDto search);
+
+        SwallResponseWrapper GetSalonList(SearchDoctorFilterDto search);
+
+
+        SwallResponseWrapper GetStoreList(SearchDoctorFilterDto search);
+        SwallResponseWrapper RegisterAppointment(AppointmentDto appointmentDto);
+        SwallResponseWrapper RegisterTimeSlot(AppointmentDto appointmentDto);
+        SwallResponseWrapper FindSlots(AppointmentDto appointmentDto);
+        SwallResponseWrapper GetDoctor(int id);
+
+        SwallResponseWrapper CancelAppointment(int id);
+        SwallResponseWrapper GetSpecialities();
+        SwallResponseWrapper SaveSpecialities(SpecialitiesDto specialitiesDto);
+
+        SwallResponseWrapper UpdateUser(AppointmentDto specialitiesDto);
+        SwallResponseWrapper GetAppointments(int salonId);
+        SwallResponseWrapper GetPatientAppointments(int patientId);
+    }
+}

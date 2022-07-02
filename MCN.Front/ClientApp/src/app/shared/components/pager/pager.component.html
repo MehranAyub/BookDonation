@@ -1,0 +1,23 @@
+<!-- <div fxLayout="row" fxLayoutAlign="center center" class="paging-bullets">
+    <i class="material-icons" style="cursor: pointer;" (click)="getIndex(1)" [ngClass]="{disabled:pager.currentPage == 1}">first_page</i>
+    <i class="material-icons" style="cursor: pointer;" (click)="getIndex(pager.currentPage - 1)" [ngClass]="{disabled:pager.currentPage == 1}">chevron_left</i>
+    <div *ngFor="let page of pager.pages let l = last" [ngClass]="{active:pager.currentPage == page}">
+      <li style="list-style: none; cursor: pointer; margin-right: 5px;" (click)="getIndex(page)"> {{page}} <span *ngIf="!l">&nbsp;|&nbsp;</span></li>
+    </div>
+    <i class="material-icons" style="cursor: pointer;" [ngClass]="{disabled:pager.currentPage == pager.totalPages}" 
+      (click)="getIndex(pager.currentPage + 1)">chevron_right</i>
+    <i class="material-icons" style="cursor: pointer;" [ngClass]="{disabled:pager.currentPage == pager.totalPages}" 
+      (click)="getIndex(pager.totalPages)">last_page</i>
+  </div> -->
+  
+  <nav aria-label="Page navigation"> 
+    <ul class="pagination justify-content-end" id="pagination">
+        <li class="page-item first" [ngClass]="{disabled:pager.currentPage == 1}" style="cursor: pointer;"><a (click)="getIndex(1)"  class="page-link"><i class="fas fa-angle-double-left"></i></a></li>
+        <li class="page-item prev" [ngClass]="{disabled:pager.currentPage == 1}" style="cursor: pointer;"><a  (click)="getIndex(pager.currentPage - 1)"  class="page-link"><i class="fas fa-chevron-left" aria-hidden="true"></i></a></li>
+        <span *ngFor="let page of pager.pages let l = last" >
+          <li   (click)="getIndex(page)"  [ngClass]="{'active':pager.currentPage == page,'page-item':true} "><a style="cursor: pointer;" class="page-link" >  {{page}}</a> </li> 
+        </span>  
+        <li class="page-item next"  style="cursor: pointer;" [ngClass]="{disabled:pager.currentPage == pager.totalPages}"><a (click)="getIndex(pager.currentPage + 1)" class="page-link"><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+        <li class="page-item last" style="cursor: pointer;" [ngClass]="{disabled:pager.currentPage == pager.totalPages}"><a  (click)="getIndex(pager.totalPages)" class="page-link"><i class="fas fa-angle-double-right"></i></a></li>
+    </ul>
+</nav>

@@ -1,0 +1,129 @@
+<div class="filter">
+    <div class="card shadow h-100">
+        <div class="card-header">
+            <div class="row">
+                <div class="col align-self-center">
+                    <h6 class="mb-0">Filter Criteria</h6>
+                    <!-- <p class="text-opac">2154 products</p> -->
+                </div>
+                <div class="col-auto px-0" >
+                    <button class="btn btn-link text-danger filter-close" >
+                        <i class="bi bi-x size-22"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body overflow-auto">
+
+            <div class="mb-4"> 
+                <app-input-field
+                placeholder="Search keywords" 
+                maxlength="25"     
+                [inputValue]="searchFilter.Keyword"    
+                (inputChange)="inputChange($event)"       
+              ></app-input-field>
+
+            </div>
+
+            <div class="mb-4">
+                <tag-input 
+                placeholder="Select skills or interests"
+                [(ngModel)]='inputInterestItems'
+                (onTextChange)="onTextChange($event)"
+                (onAdd)="onItemAdded($event)"
+                [onlyFromAutocomplete]="true" [identifyBy]="'display'" [displayBy]="'value'">
+
+                <tag-input-dropdown [autocompleteItems]="dropdownItems" >
+                </tag-input-dropdown>
+                </tag-input>
+            </div>
+
+
+            <div class="mb-4">
+                <h6>Distance Range(KM)</h6>
+                <!-- <div class="toggle">
+                    <span fxLayoutAlign="start stretch" fxFlex="100%" fxLayoutAlign="space-between start" >
+                      <app-slide-toggle  class="w-100" [checked]="this.searchFilter?.isDistance" (onChangeSlideToggle)="onChangeSlideToggle($event)"   [label]="'Is Distance Range'"  [name]="'tog-1'" [color]=true ></app-slide-toggle>
+                    </span>
+                </div> -->
+                <div *ngIf="this.searchFilter?.isDistance">
+                    <mat-slider
+                    class="mt-4 w-100"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [thumbLabel]="thumbLabel"
+                    [tickInterval]="tickInterval"
+                    [(ngModel)]="searchFilter.MaxDistance"
+                    [vertical]="vertical"
+                    aria-labelledby="example-name-label">
+                    </mat-slider>
+                </div>
+              
+                <!-- <div id="rangeslider" class="mt-4"></div> -->
+            </div>
+
+            <div class="row mb-4" *ngIf="this.searchFilter?.isDistance">
+                <div class="col-5">
+                    <!-- <div class="form-floating">
+                        <input type="number" class="form-control" [min]="min" [max]="max" [(ngModel)]="searchFilter.MinDistance" [step]="step" id="input-select">
+                        <label for="input-select">Minimum</label>
+                    </div> -->
+
+                    <app-input-field
+                    placeholder="Min" 
+                    maxlength="25"  
+                    [isDisabled]="true"
+                    [inputValue]="searchFilter.MinDistance"              
+                  ></app-input-field>
+
+                </div>
+                <div class="col-auto align-self-center"> to </div>
+                <div class="col-5"> 
+                    <app-input-field
+                    placeholder="Max" 
+                    maxlength="25" 
+                    [inputValue]="searchFilter.MaxDistance"
+                    (inputChange)="inputChange($event)"              
+                  ></app-input-field>
+                </div>
+            </div>
+ 
+            <div class="row mb-4" *ngIf="this.searchFilter?.isDistance">
+                <div class="col-8">
+                   <h6>Use my Location</h6>  
+                </div>
+                <div class="col-4"   
+                (click)="setPinLocation()"   > 
+                    <mat-icon class="float-right" style="color: #03a9f4;"> my_location</mat-icon>
+                </div>
+            </div>
+            <div class="form-group floating-form-group active mb-4">
+                <div class="mb-2"> 
+                    <app-input-field
+                    placeholder="Latitude" 
+                    maxlength="25"   
+                    [isDisabled]="true"    
+                    [inputValue]="searchFilter.SearchLat"     
+                  ></app-input-field>
+    
+                </div>
+
+                <div class="mb-2"> 
+                    <app-input-field
+                    placeholder="Longitude" 
+                    maxlength="25"   
+                    [isDisabled]="true"   
+                    [inputValue]="searchFilter.SearchLng"      
+                  ></app-input-field>
+    
+                </div>
+
+            </div>
+ 
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-lg btn-default w-100 shadow-sm" (click)="filterCriteria($event)" >Search</button>
+        </div>
+    </div>
+</div>

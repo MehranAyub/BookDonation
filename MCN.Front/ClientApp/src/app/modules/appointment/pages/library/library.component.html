@@ -1,0 +1,84 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-md-8 col-12">
+        <h2 class="breadcrumb-title">Store Library Books</h2>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="content">
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+        
+        <div class="card search-filter">
+        <div class="card-header">
+        <h4 class="card-title mb-0">Selected Store</h4>
+        </div>
+        <div class="card-body">
+            <div class="doctor-img">
+                <a >
+                <img style="margin-left:25% ;"  [src]="Store?.salonLogo" onerror="this.src='assets/img/defaultCover.png'" class="img-fluid" alt="User Image">
+                </a>
+                </div>
+                <div class="doc-info-cont">
+                    <h4 class="doc-name mt-2"><a > {{Store?.name}}</a></h4>
+                   
+                   
+                    <div class="clinic-details">
+                    
+                    <p class="doc-location mt-3"><i class="fas fa-map-marker-alt"></i> {{Store?.address}}</p>
+                    </div>
+                   
+                    </div>
+      
+        </div>
+
+
+        </div>
+        
+        </div>
+        <div class="col-md-12 col-lg-8 col-xl-9">
+        
+        <div class="card" *ngFor="let item of Books">
+        <div class="card-body">
+        <div class="doctor-widget">
+        <div class="doc-info-left">
+        <div class="doctor-img">
+        <a >
+        <img   [src]="item?.image" onerror="this.src='assets/img/defaultCover.png'" class="img-fluid" alt="User Image">
+        </a>
+        </div>
+        <div class="doc-info-cont">
+        <h4 class="doc-name"><a >{{item?.title}}</a></h4>
+        
+       
+        <div class="clinic-details">
+        <p class="doc-location mt-3"><i class="far fa-user"></i> {{item?.author}} <small style="color: green;">(author)</small></p>
+       
+        <p class="doc-location mt-3"><i class="far fa-user"></i> {{item?.publisher}} <small style="color: green;">(publisher)</small></p>
+        <p class="doc-location mt-3"><i class="fa fa-external-link"></i><a href={{item.link}} >Read From Here</a><small style="color: green;">(PDF)</small></p>
+       
+        </div>
+       
+        </div>
+        </div>
+        <!-- <div class="doc-info-right">
+       
+        <div class="clinic-booking">
+        <a class="apt-btn" style="background-color: #757575; border:none" (click)="orderBook(item.id)">Order Book</a>
+        </div>
+        </div> -->
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        

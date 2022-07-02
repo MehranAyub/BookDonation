@@ -1,0 +1,101 @@
+<div class="main-wrapper">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg header-nav">
+        <div class="navbar-header">
+        <a id="mobile_btn" href="javascript:void(0);">
+        <span class="bar-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        </span>
+        </a>
+        <a  class="navbar-brand logo">
+            <!-- <img src="assets/images/logo.png" class="img-fluid" alt="Logo"> -->
+        </a>
+        </div>
+        <div class="main-menu-wrapper">
+        <div class="menu-header">
+        <a href="index.html" class="menu-logo">
+        <!-- <img src="assets/img/logo.png" class="img-fluid" alt="Logo"> -->
+        
+        </a>
+        <a id="menu_close" class="menu-close" href="javascript:void(0);">
+        <i class="fas fa-times"></i>
+        </a>
+        </div>
+        <ul class="main-nav">
+       
+    <li class="has-submenu" *ngIf="this.appointmentDto.userLoginTypeId==2">
+        <a >Seller <i class="fas fa-chevron-down"></i></a>
+        <ul class="submenu">
+        <li><a routerLink="/seller/view-orders">View Orders</a></li>
+        <li><a routerLink="/seller/view-books">Add/View Books</a></li>
+        <li><a routerLink="/seller/register-store">View Store Profile</a></li>
+        <li><a routerLink="/seller/profile">My Profile</a></li>
+        <li><a routerLink="/seller/book-requests">Sharing</a></li>
+        <li><a routerLink="/seller/book-library">Library</a></li>
+        </ul>
+     </li>
+    
+    <li class="has-submenu" *ngIf="this.appointmentDto.userLoginTypeId==1">
+    <a >Users <i class="fas fa-chevron-down"></i></a>
+    <ul class="submenu">
+        <li><a routerLink="/book/search-salon">Stores</a></li>
+        <li><a routerLink="/book/get-all-books">Books</a></li>
+        <li><a routerLink="/book/user-orders">Orders</a></li>
+        <li><a routerLink="/seller/profile">My Profile</a></li>
+        <li><a routerLink="/book/request-book">Request Book</a></li>
+        <li><a routerLink="/book/my-requests">My REQUESTS</a></li>
+        <li><a routerLink="/book/my-wishlist">WishList</a></li>
+        <li><a routerLink="/book/book-requests">Sharing</a></li>
+    </ul>
+    </li>
+        <li class="login-link" *ngIf="user">
+        <a (click)="logout()">Logout</a>
+        </li>
+        <li class="login-link" *ngIf="!user">
+            <a routerLink="/account/login">Login</a>
+        </li>
+        </ul>
+        </div>
+        <ul class="nav header-navbar-rht">
+        <li class="nav-item" *ngIf="!user">
+        <a class="nav-link header-login" >Login </a>
+        </li>
+    
+        <li class="nav-item" *ngIf="!!user" (click)="logout()">
+            <a class="nav-link header-login" >Logout </a>
+            </li>
+        </ul>
+
+        <ul class="nav header-navbar-rht">
+
+            <li class="nav-item dropdown has-arrow logged-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <span class="user-img">
+            <img class="rounded-circle" src="assets/img/patients/patient.jpg" width="31" alt="James Ballenger">
+            </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+            <div class="user-header">
+            <div class="avatar avatar-sm">
+            <img src="assets/img/patients/patient.jpg" alt="User Image" class="avatar-img rounded-circle">
+            </div>
+            <div class="user-text">
+            <h6>{{appointmentDto?.firstName}} {{appointmentDto?.lastName}}</h6>
+            <p class="text-muted mb-0" *ngIf="this.appointmentDto.userLoginTypeId==1">Buyer</p>
+            <p class="text-muted mb-0" *ngIf="this.appointmentDto.userLoginTypeId==2">Seller</p>
+            </div>
+            </div>
+            </div>
+            </li>
+            
+            </ul>
+            
+        </nav>
+        </header>
+    
+    <router-outlet></router-outlet>
+    
+    
+   

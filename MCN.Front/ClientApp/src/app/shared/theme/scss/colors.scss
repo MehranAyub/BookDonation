@@ -1,0 +1,235 @@
+@import './styles.scss';
+
+//blue palette forground/background:
+$blue-foreground-palette: map-get($theme, foreground);
+$blue-background-palette: map-get($theme, background);
+
+//purple palette forground/background:
+$purple-foreground-palette: map-get($purple-theme, foreground);
+$purple-background-palette: map-get($purple-theme, background);
+
+//green palette forground/background:
+$green-foreground-palette: map-get($green-theme, foreground);
+$green-background-palette: map-get($green-theme, background);
+
+//teal palette forground/background:
+$teal-foreground-palette: map-get($teal-theme, foreground);
+$teal-background-palette: map-get($teal-theme, background);
+
+
+// //MAT Progressbar generic design override
+// ::ng-deep mat-progress-bar.mat-progress-bar-buffer{
+//   background-color:white;
+//   fill:white !important;
+// }
+
+// ::ng-deep mat-progress-bar.mat-accent .mat-progress-bar-background{
+//   background-color:white;
+//   fill:white !important;
+// }
+
+// ::ng-deep  mat-progress-bar.mat-progress-bar.mat-accent .mat-progress-bar-buffer{
+//   background-color:white;
+//   fill:white !important;
+// }
+
+
+// ::ng-deep mat-progress-bar.mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
+//   background-color:mat-color($primary, default);
+// }
+// ////////////////////////////////////////
+
+
+// .mat-sort-header-button{
+//   color: mat-color($blue-foreground-palette, base);
+//   }
+
+
+ 
+  
+
+    .color-background {
+        background-color: mat-color($primary, default);
+        color: mat-color($blue-foreground-palette, base);
+    }
+    .color-text {
+        color: mat-color($primary, default) !important;
+    }
+
+//     .mat-table{
+//         td{
+//             color:  mat-color($blue-background-palette, card);
+//         }
+//         background: mat-color($blue-foreground-palette, base);
+//     }
+//     .mat-list-item{
+//         background: mat-color($blue-foreground-palette, base);
+//         color:  mat-color($blue-background-palette, card);
+//     }
+
+  
+
+    
+//   mat-form-field::ng-deep { .mat-checkbox-frame {
+//       background-color: mat-color($primary, default);
+//       border-color: mat-color($primary, default);
+//     }
+//   }
+
+//   .mat-form-field.mat-focused::ng-deep {
+//     .mat-form-field-ripple {
+//       background-color: mat-color($primary, default) !important;
+//     }
+//   }
+
+//   .mat-form-field.mat-focused::ng-deep {
+//     .mat-form-field-label {
+
+//       color: mat-color($primary, default) !important;
+//     }
+//   }
+
+//   mat-radio-button::ng-deep {
+//     .mat-radio-outer-circle {
+//       border-color: mat-color($primary, default);
+//     }
+
+//     .mat-radio-inner-circle {
+//       background-color: mat-color($primary, default);
+//     }
+//   }
+
+//   mat-checkbox::ng-deep {
+//     .mat-checkbox-frame {
+//       border-color: mat-color($primary, default);
+//     }
+
+//     .mat-checkbox-background {
+//       background-color: transparent;
+//     }
+
+//     .mat-checkbox-checkmark-path {
+//       stroke: mat-color($primary, default) !important;
+//     }
+//   }
+
+//   ::ng-deep .mat-ink-bar {
+//     background-color: mat-color($primary, default) !important;
+//   }
+  
+  
+
+
+   
+    
+//   button:disabled, button[disabled] {
+//     background-color: #DFDFDF;
+//     color: #666666;
+//   }
+
+
+//   .default-background{
+//     background-color: #DFDFDF;
+//     color:black;
+//   }
+
+
+//   .mat-drawer,
+//   .mat-drawer-container {
+//     background: mat-color($blue-foreground-palette, base);
+//     color: mat-color($blue-background-palette, card);
+//   }
+
+//   .mat-accordion,
+//   .mat-expansion-panel {
+//     color: mat-color($blue-background-palette, card);
+//     background: mat-color($blue-foreground-palette, base);
+//   }
+
+//   mat-form-field::ng-deep .section-dropdown .mat-badge {
+//     color: mat-color($primary, default);
+//   }
+
+
+  
+//   mat-form-field::ng-deep .section-dropdown .mat-badge {
+//     color: mat-color($primary, default);
+//   }
+
+//   mat-form-field::ng-deep .section-dropdown .mat-select-arrow {
+//     color: mat-color($primary, default);
+//   }
+
+//   ::ng-deep .ng-fa-icon {
+//     color: mat-color($primary, default);
+//   }
+
+
+//   .mat-form-field {
+//     .mat-input-element {
+//         color: black;
+//     }
+//     .mat-form-field-label {
+//         color: #757575;
+//     }
+//     .mat-select-value{
+//       color: black;
+//     }
+//     .mat-form-field-underline {
+//         background-color: #757575;
+//     }
+//     .mat-form-field-ripple {
+//         background-color: mat-color($primary, default);
+//     }
+//     .mat-form-field-required-marker {
+//         color:mat-color($primary, default);
+//     }
+//   }
+//   //Focused: (when selected)
+  
+//   .mat-form-field.mat-focused {
+//     .mat-select-value{
+//       color: black;
+//     }
+//     .mat-form-field-label {
+//         color:mat-color($primary, default);
+//     }
+//     .mat-form-field-ripple {
+//         background-color: mat-color($primary, default);
+//     }
+//     .mat-form-field-required-marker {
+//         color: mat-color($primary, default);
+//     }
+//     .mat-input-element {
+//         color: black;
+//     }
+//   }
+  
+  
+//   //Invalid:
+//   .mat-form-field.mat-form-field-invalid {
+//     .mat-input-element {
+//         color: #f44336 !important;;
+//     }
+//     .mat-form-field-label {
+//         color: #f44336 !important;;
+//         .mat-form-field-required-marker {
+//             color: #f44336 !important;;
+//         }
+//     }
+//     .mat-form-field-ripple {
+//         background-color: #f44336 !important;;
+//     }
+//   }
+
+//   mat-card {
+//     .mat-card-content {
+//       color:#393939 !important;
+//       p {
+//         color: mat-color($primary, default);
+//       }
+//     }
+//   }
+
+
+ 

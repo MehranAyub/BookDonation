@@ -1,0 +1,149 @@
+<main class="h-100 has-header has-footer">
+
+  
+
+    <!-- main page content -->
+    <div class="main-container container">
+
+        <p class="text-opac text-center mb-4">Select best color scheme matches to your brand and application
+            concepts.
+            All available in two layout color mode Light & Dark mode. Also change screens background images &
+            menu styles.</p>
+
+        <!-- layout modes selection -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <h5 class="mb-0">Layout Mode</h5>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-6 d-grid">
+                <input type="radio" class="btn-check" name="layout-mode" checked id="btn-layout-modes-light">
+                <label class="btn btn-outline-warning shadow-sm bg-white" for="btn-layout-modes-light"><i class="bi bi-sun fs-4 mb-2 d-block"></i>Light
+                    Mode</label>
+            </div>
+            <div class="col-6 d-grid">
+                <input type="radio" class="btn-check" name="layout-mode" id="btn-layout-modes-dark">
+                <label class="btn btn-outline-dark shadow-sm bg-dark text-white" for="btn-layout-modes-dark"><i
+                        class="bi bi-moon-stars fs-4 mb-2 d-block"></i>Dark
+                    Mode</label>
+            </div>
+        </div>
+
+        <!-- color scheme selection -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <h5 class="mb-0">Color scheme</h5>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-auto">
+                <input type="radio" class="btn-check" name="color-scheme" id="btn-color-danger" data-title="red">
+                <label class="btn btn-outline-danger shadow-sm avatar avatar-50 p-0" for="btn-color-danger">RD</label>
+            </div>
+            <div class="col-auto">
+                <input type="radio" class="btn-check" name="color-scheme" id="btn-color-warning" data-title="yellow">
+                <label class="btn btn-outline-warning shadow-sm avatar avatar-50 p-0" for="btn-color-warning">YW</label>
+            </div>
+            <div class="col-auto">
+                <input type="radio" class="btn-check" name="color-scheme" id="btn-color-success" data-title="green">
+                <label class="btn btn-outline-success shadow-sm avatar avatar-50 p-0" for="btn-color-success">GR</label>
+            </div>
+            <div class="col-auto">
+                <input type="radio" class="btn-check" name="color-scheme" id="btn-color-primary" data-title="blue">
+                <label class="btn btn-outline-primary shadow-sm avatar avatar-50 p-0" for="btn-color-primary">BL</label>
+            </div>
+            <div class="col-auto">
+                <input type="radio" class="btn-check" name="color-scheme" id="btn-color-pink" data-title="" checked>
+                <label class="btn btn-outline-pink shadow-sm avatar avatar-50 p-0" for="btn-color-pink">PN</label>
+            </div>
+        </div>
+
+        <!-- layout modes selection -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <h5 class="mb-0">RTL -LTR Layout</h5>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-6 d-grid">
+                <input type="radio" class="btn-check" name="layout-mode" checked id="btn-ltr" checked>
+                <label class="btn btn-outline-primary shadow-sm" for="btn-ltr">Left to Right</label>
+            </div>
+            <div class="col-6 d-grid">
+                <input type="radio" class="btn-check" name="layout-mode" id="btn-rtl">
+                <label class="btn btn-outline-primary shadow-sm" for="btn-rtl">Right to Left</label>
+            </div>
+        </div>
+
+        <!-- background selection -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <h5 class="mb-1">Background Image</h5>
+                <p class="text-opac">Background images are visible on <code>dark-bg</code> class used
+                    in sign in screen. <a href="signin.html">Click here</a> to see preview after selecting below
+                    image.</p>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col mb-4">
+                <input type="radio" class="btn-check" name="background-select" checked id="btn-bg1" data-src="bg1">
+                <label class="btn btn-outline-theme background-btn p-0 text-center border-0" for="btn-bg1">
+                    <img src="assets/img/setting-bg-1%402x.png" alt="" class="mw-100"><br><span class="py-2 d-block">Geomatric</span>
+                </label>
+            </div>
+            <div class="col mb-4">
+                <input type="radio" class="btn-check" name="background-select" id="btn-bg2" data-src="bg2">
+                <label class="btn btn-outline-theme background-btn p-0 text-center border-0" for="btn-bg2">
+                    <img src="assets/img/setting-bg-2%402x.png" alt="" class="mw-100"><br><span class="py-2 d-block">Modern</span>
+                </label>
+            </div>
+            <div class="col mb-4">
+                <input type="radio" class="btn-check" name="background-select" id="btn-bg3" data-src="bg3">
+                <label class="btn btn-outline-theme background-btn p-0 text-center border-0" for="btn-bg3">
+                    <img src="assets/img/setting-bg-3%402x.png" alt="" class="mw-100"><br><span class="py-2 d-block">Bubble</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- menu style selection -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <h6 class="my-1">Menu Style</h6>
+                <p class="text-opac">This will just add class to sidebar and its done. Nothing to do change in
+                    structure. Get your favorite class <code>sidebar-pushcontent</code>, <code>sidebar-overlay</code>,
+                    <code>sidebar-fullmenu</code>, and add to sidebar div.</p>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col mb-4">
+                <input type="radio" class="btn-check" name="menu-select" checked id="btn-menu1" data-title="overlay">
+                <label class="btn btn-outline-theme background-btn p-0 text-center border-0" for="btn-menu1">
+                    <img src="assets/img/setting-menu-1%402x.png" alt="" class="mw-100"><br><span class="py-2 d-block">Popover</span>
+                </label>
+            </div>
+            <div class="col mb-4">
+                <input type="radio" class="btn-check" name="menu-select" id="btn-menu2" data-title="pushcontent">
+                <label class="btn btn-outline-theme background-btn p-0 text-center border-0" for="btn-menu2">
+                    <img src="assets/img/setting-menu-2%402x.png" alt="" class="mw-100"><br><span class="py-2 d-block">Push
+                        Page</span>
+                </label>
+            </div>
+            <div class="col mb-4">
+                <input type="radio" class="btn-check" name="menu-select" id="btn-menu3" data-title="fullmenu">
+                <label class="btn btn-outline-theme background-btn p-0 text-center border-0" for="btn-menu3">
+                    <img src="assets/img/setting-menu-3%402x.png" alt="" class="mw-100"><br><span class="py-2 d-block">Fullscreen</span>
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <!-- main page content ends -->
+
+
+</main>

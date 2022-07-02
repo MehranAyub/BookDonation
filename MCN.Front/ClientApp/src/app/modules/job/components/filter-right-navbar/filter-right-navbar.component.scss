@@ -1,0 +1,21 @@
+::ng-deep .filter{
+     
+        .ng2-tag-input{
+    background: #fff !important;
+    border-radius: 0.5rem !important;
+    min-height: 60px !important;
+    border: 0.125rem solid transparent;
+    transition: all ease 0.2s;
+    font-family: inherit;
+    border-bottom: unset !important;
+} 
+.ng2-tag-input__text-input{
+    min-height: 48px !important;
+    padding-left: 1.375rem !important;
+    font-family: inherit;
+    font: inherit;
+}
+.ng2-tag-input.ng2-tag-input--focused {
+    border: 0.125rem solid #5b79c6 !important;
+}
+}

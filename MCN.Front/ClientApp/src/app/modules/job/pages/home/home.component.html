@@ -1,0 +1,37 @@
+
+<div class="home-map">
+ 
+<button class="btn btn-primary text-white avatar avatar-50 p-0 rounded-circle shadow-sm filter-btn"><i class="bi bi-search"></i></button>
+
+<google-map
+height="100vh"
+width="100%"
+[zoom]="zoom"
+[center]="center"
+[options]="options"
+>
+
+<map-polyline
+[path]="vertices"
+[options]="{ strokeColor: '#0097fb', strokeWidth: 2 }"
+></map-polyline>
+
+<map-marker
+  #marker="mapMarker"
+  *ngFor="let mark of markers"
+  [position]="mark.position"
+  [title]="mark.title"
+  [options]="mark.options"
+  (mapClick)="openInfoWindow(marker,mark)"
+>
+</map-marker>
+
+<map-info-window> <div [innerHtml]="infoContent"></div><div><a style="text-decoration: none;" routerLink="/job/profile"><b>Go To Profile</b> .<i class="bi bi-arrow-90deg-right"></i></a></div> </map-info-window>
+</google-map>
+
+<!-- google map -->
+    </div>
+
+<!-- filter menu -->
+<app-filter-right-navbar (searchCriteria)="searchCriteria($event)" ></app-filter-right-navbar>
+<!-- filter menu ends-->

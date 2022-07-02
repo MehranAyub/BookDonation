@@ -1,0 +1,504 @@
+@import '~@angular/material/theming';
+
+$l-typography: mat-typography-config(
+  $headline:      mat-typography-level(22px, 24px, 500),
+  $title:         mat-typography-level(22px, 32px, 500),
+  $subheading-2:  mat-typography-level(16px, 24px, 500),
+  $subheading-1:  mat-typography-level(16px, 24px, 400),
+  $body-2:        mat-typography-level(15px, 19px, 500),
+  $body-1:        mat-typography-level(15px, 20px, 400), 
+  $caption:       mat-typography-level(16px, 21px, 400), 
+  $button:        mat-typography-level(16px, 24px, 500), 
+  $input:        mat-typography-level(15px, 1, 400)
+);
+
+$m-typography: mat-typography-config(
+  $headline:      mat-typography-level(20px, 24px, 500),
+  $title:         mat-typography-level(20px, 26px, 500),
+  $subheading-2:  mat-typography-level(15px, 24px, 400),
+  $subheading-1:  mat-typography-level(15px, 20px, 400),
+  $body-2:        mat-typography-level(14px, 19px, 500),
+  $body-1:        mat-typography-level(14px, 18px, 400),
+  $caption:       mat-typography-level(13px, 20px, 400),
+  $button:        mat-typography-level(15px, 14px, 500),
+  $input:        mat-typography-level(14px, 1, 400)
+);
+
+$s-typography: mat-typography-config( 
+  $headline:      mat-typography-level(19px, 22px, 500),
+  $title:         mat-typography-level(19px, 22px, 500),
+  $subheading-2:  mat-typography-level(14px, 17px, 400),
+  $subheading-1:  mat-typography-level(14px, 17px, 400),
+  $body-2:        mat-typography-level(13px, 17px, 500),/*14px*/
+  $body-1:        mat-typography-level(13px, 17px, 400),/*14px*/
+  $caption:       mat-typography-level(10px, 14px, 400),
+  $button:        mat-typography-level(14px, 14px, 500),
+  $input:        mat-typography-level(13px, 1, 500)
+);
+
+$xs-typography: mat-typography-config(
+  $headline:      mat-typography-level(18px, 22px, 500),
+  $title:         mat-typography-level(18px, 22px, 500),
+  $subheading-2:  mat-typography-level(13px, 17px, 400),
+  $subheading-1:  mat-typography-level(13px, 17px, 400),
+  $body-2:        mat-typography-level(12px, 17px, 500),/*14px*/
+  $body-1:        mat-typography-level(12px, 17px, 400), /*14px*/
+  $caption:       mat-typography-level(10px, 14px, 400),
+  $button:        mat-typography-level(13px, 14px, 500),
+  $input:        mat-typography-level(12px, 1, 500)
+);
+
+@include angular-material-typography($s-typography); 
+// .l-typography {
+//     @include angular-material-typography($l-typography);    
+//   mat-radio-button{
+//       font-size: 14px;
+//   }  
+//   mat-checkbox::ng-deep { 
+//     font-size: 17px;
+//   .mat-checkbox-inner-container{
+//     width: 16px !important;
+//     height: 16px !important;
+//       }
+//     }
+//       mat-radio-button::ng-deep { 
+//         .mat-radio-container{
+//           width: 20px !important;
+//           height: 20px !important;
+//         }
+
+//       .mat-radio-outer-circle{
+//         width: 20px !important;
+//         height: 20px !important;
+//       }
+//       .mat-radio-inner-circle{
+//         width: 20px !important;
+//         height: 20px !important;
+//       }
+//     }
+//     // mat-icon{
+//     //   font-size: 24px !important;
+//     //         }
+             
+//   .mat-header-cell
+//   {
+//     font-size: 16px;
+//     font-weight: 500;
+//   }
+//   .mat-cell,.mat-footer-cell
+//   {
+    
+//     font-size: 16px;
+//     font-weight: 400;
+//   }
+
+
+  
+//   mat-card {
+//     .mat-card-content {
+//       font-size: 12px !important;
+//       font-weight: 500;
+//       line-height: 10px;
+//       p {
+//         font-size: 10px;
+//       }
+//     }
+  
+//   }
+//    ng-select {     
+//       height: 63.531px !important;
+//       line-height: 15px !important; 
+//       padding-bottom: 0px !important;
+//   }
+
+//   ::ng-deep ng-select {
+//     .ng-value{
+//       font-size: 15px;
+//       font-weight: 400;
+//        margin-top: 9px;     
+//     }
+//     .ng-has-value{
+//       margin-top: -3px !important;
+//     }
+//   }
+
+//   ::ng-deep .ng-select div, .ng-select input, .ng-select span{
+//     font-size: 15px; 
+//   }
+
+//   ::ng-deep .ng-select-container{ 
+    
+//     min-height: 46px !important;
+//     .ng-placeholder{
+//     padding-top: 0px !important;
+//     .ng-value{
+//       margin-top: 3px;
+//     }
+//   }
+ 
+// }
+  
+
+//   ::ng-deep .mat-autocomplete-panel .mat-option{
+//     font-size: 16px !important;
+//   }
+
+//   // mat-icon{
+//   //   font-size: 26px !important;
+//   //   }
+
+  ::ng-deep .mat-button,.mat-flat-button, .mat-raised-button{
+  height: 35px !important;
+  }
+  
+// }
+
+
+// .m-typography {
+//     @include angular-material-typography($m-typography);
+//     mat-radio-button{
+//       font-size: 14px;
+//   }  
+//   mat-checkbox::ng-deep { 
+//     font-size: 16px;
+//   .mat-checkbox-inner-container{
+// width: 13px !important;
+// height: 13px !important;
+//   }
+// }
+//   mat-radio-button::ng-deep { 
+//     .mat-radio-container{
+//       width: 18px !important;
+//       height: 18px !important;
+//     }
+//   .mat-radio-outer-circle{
+//     width: 18px !important;
+//     height: 18px !important;
+//   }
+//   .mat-radio-inner-circle{
+//     width: 18px !important;
+//     height: 18px !important;
+//   }
+// }
+
+// // mat-icon{
+// //   font-size: 22px !important;
+// //         }
+        
+//         .mat-radio-ripple{
+//           width: 38px !important;
+//           height: 38px !important;
+//         }
+      
+
+                     
+//   .mat-header-cell
+//   {
+//     font-size: 15px;
+//     font-weight: 500;
+//   }
+//   .mat-cell,.mat-footer-cell
+//   {
+    
+//     font-size: 15px;
+//     font-weight: 400;
+//   }
+
+  
+//   mat-card {
+//     .mat-card-content {
+//       font-size: 12px !important;
+//       font-weight: 500;
+//       line-height: 10px;
+//       p {
+//         font-size: 10px;
+//       }
+//     }
+  
+//   }
+
+
+//   ng-select {     
+//     height: 63.531px !important;
+//     line-height: 15px !important; 
+//     padding-bottom: 0px !important;
+// }
+
+// ::ng-deep ng-select {
+  
+//   font-size: 14px;
+//   font-weight: 400;
+//   .ng-value{ 
+//      margin-top: 9px;     
+//   }
+//   .ng-has-value{
+//     margin-top: -3px !important;
+//   }
+// }
+
+// ::ng-deep .ng-select div, .ng-select input, .ng-select span{
+//   font-size: 14px; 
+// }
+
+// ::ng-deep .ng-select-container{ 
+  
+//   min-height: 46px !important;
+//   .ng-placeholder{
+//   padding-top: 0px !important;
+//   .ng-value{
+//     margin-top: 3px;
+//   }
+// }
+
+// }
+
+  
+  
+//   ::ng-deep .mat-autocomplete-panel .mat-option{
+//     font-size: 14px !important;
+//   }
+
+//   // mat-icon{
+//   //   font-size: 24px !important;
+//   //   }
+
+//   ::ng-deep .mat-button{
+//   height: 43px !important;
+//   }
+  
+// }
+
+
+
+.s-typography {
+    @include angular-material-typography($s-typography);
+    mat-radio-button{
+      font-size: 14px;
+  }  
+ 
+  mat-checkbox::ng-deep { 
+    font-size: 15px;
+    .mat-checkbox-inner-container{
+      width: 13px !important;
+      height: 13px !important;
+        }
+  }
+
+ 
+      mat-radio-button::ng-deep {  
+        .mat-radio-container{
+          width: 16px !important;
+          height: 16px !important;
+        }
+        .mat-radio-outer-circle{
+          width: 16px !important;
+          height: 16px !important;
+        }
+        .mat-radio-inner-circle{
+          width: 16px !important;
+          height: 16px !important;
+        }
+      }
+    
+     
+                     
+  .mat-header-cell
+  {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .mat-cell,.mat-footer-cell
+  {
+    
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  mat-card {
+    .mat-card-content {
+      font-size: 12px !important;
+      font-weight: 500;
+      line-height: 10px;
+      p {
+        font-size: 10px;
+      }
+    }
+  
+  }
+  
+
+
+  ng-select {     
+    height: 63.531px !important;
+    line-height: 15px !important; 
+    padding-bottom: 0px !important;
+}
+
+::ng-deep ng-select {
+  
+  font-size: 13px;
+  font-weight: 500;
+  .ng-value{ 
+     margin-top: 9px;     
+  }
+  .ng-has-value{
+    margin-top: -6px !important;
+  }
+}
+
+::ng-deep .ng-select div, .ng-select input, .ng-select span{
+  font-size: 13px; 
+}
+
+::ng-deep .ng-select-container{ 
+  
+  min-height: 40px !important;
+  .ng-placeholder{
+  padding-top: 0px !important;
+  .ng-value{
+    margin-top: 3px;
+  }
+}
+
+}
+ 
+ 
+
+  ::ng-deep .mat-autocomplete-panel .mat-option{
+    font-size: 12px !important;
+  }
+
+  // mat-icon{
+  //   font-size: 22px !important;
+  //   }
+
+  ::ng-deep .mat-button{
+  height: 40px !important;
+  }
+
+}
+
+// .xs-typography {
+//     @include angular-material-typography($xs-typography);
+//     mat-radio-button{
+//       font-size: 12px;
+//   }  
+//   mat-checkbox::ng-deep { 
+//     font-size: 14px;
+//   .mat-checkbox-inner-container{
+//     width: 13px !important;
+//     height: 13px !important;
+//       }
+//     }
+//       mat-radio-button::ng-deep { 
+//       .mat-radio-outer-circle{
+//         width: 16px !important;
+//         height: 16px !important;
+//       }
+//       .mat-radio-inner-circle{
+//         width: 16px !important;
+//         height: 16px !important;
+//       }
+//     }
+//     // mat-icon{
+//     //   font-size: 20px !important;
+//     //         }
+
+
+                            
+//   .mat-header-cell
+//   {
+//     font-size: 12px;
+//     font-weight: 500;
+//   }
+//   .mat-cell,.mat-footer-cell
+//   {
+    
+//     font-size: 12px;
+//     font-weight: 400;
+//   }
+  
+// mat-card {
+//   .mat-card-content {
+//     font-size: 12px !important;
+//     font-weight: 500;
+//     line-height: 10px;
+//     p {
+//       font-size: 10px;
+//     }
+//   }
+// }
+
+
+
+// ng-select {     
+//   height: 63.531px !important;
+//   line-height: 15px !important; 
+//   padding-bottom: 0px !important;
+// }
+
+// ::ng-deep ng-select {
+
+// font-size: 12px;
+// font-weight: 500;
+// .ng-value{ 
+//    margin-top: 9px;     
+// }
+// .ng-has-value{
+//   margin-top: -6px !important;
+// }
+// }
+
+// ::ng-deep .ng-select div, .ng-select input, .ng-select span{
+// font-size: 12px; 
+// }
+
+// ::ng-deep .ng-select-container{ 
+
+// min-height: 36px !important;
+// .ng-placeholder{
+// padding-top: 0px !important;
+// .ng-value{
+//   margin-top: 3px;
+// }
+// }
+
+// }
+
+// ::ng-deep .mat-autocomplete-panel .mat-option{
+//   font-size: 12px !important;
+// }
+
+// ::ng-deep .mat-button{
+//   height: 38px !important;
+//   }
+
+// }
+
+
+// ::ng-deep .mat-autocomplete-panel .mat-option{
+//   font-size: 12px !important;
+// }
+
+
+// // .mat-autocomplete-panel{
+// //   .mat-option{
+// //     font-size: 12px !important;
+// //   }
+// // }
+// // ::ng-deep .mat-autocomplete-panel{
+// //   mat-option{
+// //     font-size: 12px !important;
+// //   }
+// // }
+
+
+//   // .mat-autocomplete-panel .mat-option{
+//   //   font-size: 12px !important;
+//   // }
+
+
+
+//   // ::ng-deep .mat-autocomplete-panel .mat-option{
+//   //   font-size: 12px !important;
+//   // }

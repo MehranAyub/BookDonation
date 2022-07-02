@@ -1,0 +1,106 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a>Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form>
+
+                            <div class="info-widget">
+                                <h4 class="card-title">Request Book</h4>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group card-label">
+                                            <label>Your Name</label>
+                                            <input class="form-control" [value]="BuyerName" disabled name="firstName"
+                                                type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group card-label">
+                                            <label>Title</label>
+                                            <input class="form-control" [(ngModel)]="requestDto.Title" name="name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group card-label">
+                                            <label>Author Name</label>
+                                            <input class="form-control" [(ngModel)]="requestDto.AuthorName" name="name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group card-label">
+                                            <label>Publisher Name</label>
+                                            <input class="form-control" [(ngModel)]="requestDto.PublisherName" name="name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group card-label">
+                                            <label>Address</label>
+                                            <input class="form-control" [(ngModel)]="requestDto.Address" name="name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group card-label">
+                                            <label>Edition</label>
+                                            <input class="form-control" [(ngModel)]="requestDto.Edition" name="phone" type="text">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div><button class="btn btn-block btn-primary" (click)="PlaceOrder()">Request
+                                        Book</button></div>
+                                <p style="color: red;">{{formError}}</p>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-4 theiaStickySidebar">
+
+                <div class="card booking-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Request Book</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="booking-doc-info">
+
+                            <div class="booking-info">
+                                <h4><a>Sharing is Caring</a></h4>
+
+                                <div class="clinic-details">
+                                    <p>We believe that Sharing is Caring.You can request a book if you really need it.
+                                    </p>
+                                    <p>In the same way you also please share your books with others if someone request
+                                        and you have extra.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

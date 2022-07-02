@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/css/bootstrap.min.css';
+@import 'assets/plugins/fontawesome/css/fontawesome.min.css';
+@import 'assets/plugins/fontawesome/css/all.min.css';
+@import 'assets/css/style.css';
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+background:url('assets/img/bgshapes.png') repeat-x center top, url('assets/img/bgshapes2.png') repeat-x center bottom;
+background-attachment:fixed;
+    background-color: #F8EBEE;
+}
+
+.bottomsheet-container {
+    padding: 32px 24px !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 95vh !important;
+    box-shadow: 0px -6px 16px rgba(0, 32, 76, 0.2);
+    &.max-height {
+      height: 623px !important;
+      max-height: 623px !important;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #52E5A5;
+    }
+  }
