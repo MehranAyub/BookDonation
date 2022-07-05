@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NotificationTypeEnum, SnackBarService } from 'src/app/shared/snack-bar.service';
 import { AppointmentService, OrderDto, RequestDto } from '../../services/appointment.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class RequestBookComponent implements OnInit {
  
   requestDto:RequestDto={Title:'',AuthorName:'',PublisherName:'',Address:'',RequestBy:null,Edition:''}
   BuyerName:string="";
-  constructor(private router:Router,private appointmentService:AppointmentService) {
+  constructor(private snackbarService:SnackBarService,private router:Router,private appointmentService:AppointmentService) {
     
     let user=JSON.parse(localStorage.getItem('currentUser'));
     if(user.user.userLoginTypeId==1){
@@ -32,8 +33,8 @@ if(this.requestDto.Title!=''||this.requestDto.Address!=''||this.requestDto.Autho
 
   this.appointmentService.RequestBook(this.requestDto).subscribe((res)=>{
     if(res.data){
-      console.log(res.data)
-      this.router.navigate(['/book/booking-success']);
+      this.snackbarService.openSnack("Your Request Has been places",NotificationTypeEnum.Success);
+      this.router.navigate(['/book/my-requests']);
     }
   })
 }

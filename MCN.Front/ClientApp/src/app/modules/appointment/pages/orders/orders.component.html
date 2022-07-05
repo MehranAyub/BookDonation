@@ -33,6 +33,7 @@
                                     <h5><i class="fas fa-sort-amount-up"></i> {{item?.copies}}</h5>
                                     <h5><i class='fas fa-money-bill'></i> {{item?.bill}}</h5>
                                     <h5><i class="fa fa-calendar"></i>{{item?.date}}</h5>
+                                    <h5><i class="fa fa-passport"></i>{{item?.trackId}}</h5>
 
                                 </div>
                             </div>
@@ -49,7 +50,14 @@
                                     class="btn btn-primary">Accepted</button>
                             </div>
                             <div *ngIf="item.status==3;">
-                                <button type="button" class="btn btn-success">Delivered</button>
+                                <div>
+                                <button type="button" class="btn btn-success float-right">Delivered</button>
+                            </div>
+                            <div class="mt-5">
+
+                                <input  size="10" #feed name="feed" type="text">
+                                <button type="button mt-3" (click)="AddFeedback(item.bookid,feed.value)" (click)="feed.value=''" class="btn btn-warning">Feedback</button>
+                            </div>
                             </div>
 
                             <!-- <a class="apt-btn" (click)="CancelAppointment(item.id)">Book Appointment</a> -->

@@ -17,10 +17,11 @@ import { BookRuquestsComponent } from './pages/book-ruquests/book-ruquests.compo
 import { MyRequestsComponent } from './pages/my-requests/my-requests.component';
 import { LibraryComponent } from './pages/library/library.component';
 import { MyWishlistComponent } from './pages/my-wishlist/my-wishlist.component';
+import { ReveiwsComponent } from './pages/reveiws/reveiws.component';
 
 
 @NgModule({
-  declarations: [AppointmentComponent, SearchDoctorComponent, CheckoutComponent, BookingSuccessComponent, PatientAppointmentsComponent, SelectedDayComponent, SearchBarbersComponent, AllBooksComponent, OrdersComponent, RequestBookComponent, BookRuquestsComponent, MyRequestsComponent, LibraryComponent, MyWishlistComponent],
+  declarations: [AppointmentComponent, SearchDoctorComponent, CheckoutComponent, BookingSuccessComponent, PatientAppointmentsComponent, SelectedDayComponent, SearchBarbersComponent, AllBooksComponent, OrdersComponent, RequestBookComponent, BookRuquestsComponent, MyRequestsComponent, LibraryComponent, MyWishlistComponent, ReveiwsComponent],
   imports: [
     CommonModule,
     FormsModule,

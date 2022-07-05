@@ -38,7 +38,7 @@ namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.UserRepositoryBL.Dtos
     public class FeedDto
     {
         public string feedback { get; set; }
-        public int StoreId { get; set; }
+        public int BookId { get; set; }
         public int UserId { get; set; }
 
     }

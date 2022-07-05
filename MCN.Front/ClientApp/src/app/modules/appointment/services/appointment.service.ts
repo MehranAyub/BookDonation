@@ -159,6 +159,14 @@ AddLibBook(model:LibraryDto): Observable<any> {// have to add this API.
 AddToWish(model:WishDto):Observable<any>{
   return this.apiService.post('Users/AddToWishlist',model);
 }
+AddFeedback(model:FeedDto):Observable<any>{
+  return this.apiService.post('Users/Feedback',model);
+}
+GetReviews(id): Observable<any> {
+  this.paramss = new HttpParams().set('id',id)
+  return this.apiService.get('Users/GetReviews',this.paramss);
+}
+
 }
 
 export interface SearchDoctorFilterDto{
@@ -263,6 +271,12 @@ export interface BarberDto{
         RequestId:number,
         AcceptBy:number
          }
+         export interface FeedDto{
+          BookId:number,
+          UserId:number,
+          feedback:string
+           }
+
 
 export class SpecialitiesDto
 {

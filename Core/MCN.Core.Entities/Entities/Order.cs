@@ -18,6 +18,8 @@ namespace MCN.Core.Entities.Entities
         public int BookCreatedBy { get; set; }
         public int? Bill { get; set; }
         public int Status { get; set; }
+
+        public string TrackId { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
     }

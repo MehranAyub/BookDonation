@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppointmentService } from 'src/app/modules/appointment/services/appointment.service';
 import { NotificationTypeEnum, SnackBarService } from 'src/app/shared/snack-bar.service';
+import { BookLibraryComponent } from '../book-library/book-library.component';
 
 @Component({
   selector: 'app-appointments',
@@ -11,6 +12,7 @@ import { NotificationTypeEnum, SnackBarService } from 'src/app/shared/snack-bar.
 export class AppointmentsComponent implements OnInit {
 
   constructor(private appointmentService:AppointmentService,private snackbarService:SnackBarService,private router:Router) { }
+
   appointments:any=[];
   ngOnInit(): void {
     let user=JSON.parse(localStorage.getItem('currentUser'));

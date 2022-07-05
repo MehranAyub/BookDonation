@@ -66,6 +66,16 @@ AddToWish(id){
   }
 }
 
+GetReviews(id){
+  if(this.user){
+this.router.navigate(['book/reviews'],{ queryParams: { bookId: id}});
+  }
+  else{
+    this.router.navigate(['/account/login']);
+  }
+}
+
+
 AdvanceSearch(){
     this.searchAll();
   }

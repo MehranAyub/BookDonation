@@ -46,6 +46,7 @@ namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.UserRepositoryBL
         SwallResponseWrapper AddToWishlist(WishDto dto);
         SwallResponseWrapper Feedback(FeedDto dto);
         SwallResponseWrapper GetWishBooks(int id);
+        SwallResponseWrapper GetReviews(int id);
         int GetSalonID(int id);
 
         string RemoveBarber(int id);

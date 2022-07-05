@@ -11,6 +11,7 @@ import { MyWishlistComponent } from './pages/my-wishlist/my-wishlist.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { PatientAppointmentsComponent } from './pages/patient-appointments/patient-appointments.component';
 import { RequestBookComponent } from './pages/request-book/request-book.component';
+import { ReveiwsComponent } from './pages/reveiws/reveiws.component';
 import { SearchBarbersComponent } from './pages/search-barbers/search-barbers.component';
 import { SearchDoctorComponent } from './pages/search-doctor/search-doctor.component';
 import { SelectedDayComponent } from './pages/selected-day/selected-day.component';
@@ -90,6 +91,12 @@ const routes: Routes = [
     {
       path: 'my-wishlist',
       component: MyWishlistComponent,      
+      canActivate:[AuthGuard]
+    }
+    ,
+    {
+      path: 'reviews',
+      component: ReveiwsComponent,      
       canActivate:[AuthGuard]
     }
 ]

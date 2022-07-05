@@ -627,5 +627,18 @@ namespace MCN.WebAPI.Areas.Users
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("GetReviews")]
+        public IActionResult GetReviews(int id)
+        {
+
+            var result = _UserRepositoryBL.GetReviews(id);
+
+
+            return Ok(result);
+
+        }
     }
 }

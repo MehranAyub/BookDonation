@@ -786,6 +786,7 @@ namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.UserRepositoryBL
                 Address = dto.Address,
                 Copies = dto.Copies,
                 BookCreatedBy = dto.BookCreatedBy,
+                TrackId= RandomHelper.GetRandomNumber().ToString("x"),
                 Phone = dto.Phone,
                 Status = 1, //order Place (pending)
                 Date = DateTime.Now.ToString(),
@@ -828,8 +829,7 @@ namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.UserRepositoryBL
                 var book = repositoryContext.Book.ToList();
 
                 var data = (from O in order
-                            join B in book on O.BookId equals B.ID into fil
-                            from File in fil.DefaultIfEmpty()
+                            join B in book on O.BookId equals B.ID 
                             select new
                             {
                                 ID = O.ID,
@@ -837,8 +837,10 @@ namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.UserRepositoryBL
                                 Copies = O.Copies,
                                 Status = O.Status,
                                 Date = O.Date,
-                                Title = File.Title,
-                                Author = File.AuthorName,
+                                Bookid=B.ID,
+                                Title = B.Title,
+                                TrackId=O.TrackId,
+                                Author = B.AuthorName,
                             }
                             ).ToList();
 
@@ -1124,7 +1126,7 @@ namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.UserRepositoryBL
             Feedback feed = new Feedback
             {
                 UserId = dto.UserId,
-                StoreId = dto.StoreId,
+                BookId = dto.BookId,
                 feedback=dto.feedback
 
             };
@@ -1138,7 +1140,38 @@ namespace MCN.ServiceRep.BAL.ServicesRepositoryBL.UserRepositoryBL
                 Data = 1
             };
         }
-    }
+
+        public SwallResponseWrapper GetReviews(int id)
+        {
+            var feed = repositoryContext.Feedback.Where(x => x.BookId == id).ToList();
+            if (feed.Count > 0)
+            {
+                var users = repositoryContext.Users.ToList();
+                var reviews = (from F in feed
+                               join U in users on F.UserId equals U.ID
+                               select new
+                               {
+                                   Review = F.feedback,
+                                   Name = U.FirstName + " " + U.LastName,
+                               }
+                            ).ToList();
+
+                return new SwallResponseWrapper()
+                {
+                    SwallText = null,
+                    StatusCode = 200,
+                    Data = reviews
+                };
+            }
+            return new SwallResponseWrapper()
+            {
+                SwallText = null,
+                StatusCode = 400,
+                Data = null
+            };
+        }
+
+        }
 }
 
 

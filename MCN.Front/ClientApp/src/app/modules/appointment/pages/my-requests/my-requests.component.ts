@@ -22,7 +22,7 @@ export class MyRequestsComponent implements OnInit {
         this.requests=res.data;
       }
       else{
-this.errors="You have not ordered any Book Yet"
+this.errors="You have not Requested any Book Yet"
       }
     })
     }
@@ -37,7 +37,7 @@ this.errors="You have not ordered any Book Yet"
       if(res.data){
         this.snackbarService.openSnack(res.swallText.title,NotificationTypeEnum.Success);
          this.ngOnInit();
-       // this.appointmentDto.DoctorId=this.doctor;
+    
       }
     })
   }

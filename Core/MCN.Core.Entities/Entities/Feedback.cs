@@ -13,10 +13,10 @@ namespace MCN.Core.Entities.Entities
         public  int ID { get;set;}
         public string feedback { get; set; }
         public int UserId { get; set; }
-        public int StoreId { get; set; }
+        public int BookId { get; set; }
         [ForeignKey(nameof(UserId))]
         public User Users { get; set; }
-        [ForeignKey(nameof(StoreId))]
-        public Salon Store { get; set; }
+        [ForeignKey(nameof(BookId))]
+        public Book Book { get; set; }
     }
 }
